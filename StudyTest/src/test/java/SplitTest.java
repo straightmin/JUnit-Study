@@ -7,23 +7,26 @@
  * 민종현
  */
 
-package test;
+package test.java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
-import test.java.Split;
 
 class SplitTest {
 	
 	Split split = new Split();
 
 	@Test
-	void testSplit() {
+	void testSplit_01() {
 		
-		// 1,2"을 , 로 split 했을 때 1과 2로 잘 분리되는지 확인하는 학습 테스트
+		// "1,2"을 , 로 split 했을 때 1과 2로 잘 분리되는지 확인하는 학습 테스트
 		assertArrayEquals(new String[] {"1", "2"}, split.split("1,2", ","));
+		
+	}
+
+	@Test
+	void testSplit_02() {
 		
 		// "1"을 , 로 split 했을 때 1만을 포함하는 배열이 반환되는지에 대한 학습 테스트
 		assertArrayEquals(new String[] {"1"}, split.split("1", ","));

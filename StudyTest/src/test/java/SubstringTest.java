@@ -6,19 +6,18 @@
  * 민종현
  */
 
-package test;
+package test.java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import test.java.Substring;
-
 class SubstringTest {
+	
+	Substring substring = new Substring();
 
 	@Test
 	void testSub() {
-		Substring substring = new Substring();
 		
 		assertEquals("1,2", substring.sub("(1,2)"));
 	}

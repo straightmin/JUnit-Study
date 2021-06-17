@@ -9,27 +9,30 @@
  * 민종현
  */
 
-package test;
+package test.java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import test.java.CharAt;
-
 class CharAtTest {
+
+	CharAt chAt = new CharAt();
 
 	@Test
 	@DisplayName("CharAt Test")
-	void testCharAt() {
-
-		CharAt chAt = new CharAt();
+	void testCharAt_01() {
 		
 		assertEquals('a', chAt.charAt("abc", 0));
+		
+	}
+
+	@Test
+	@DisplayName("CharAt Test")
+	void testCharAt_StringIndexOutOfBoundsException() {
 
 		assertEquals('d', chAt.charAt("abc", 3));
-		
 		
 	}
 
