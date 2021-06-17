@@ -13,11 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class SubstringTest {
-	
-	Substring substring = new Substring();
 
 	@Test
 	void testSub() {
+		Substring substring = new Substring();
 		
 		assertEquals("1,2", substring.sub("(1,2)"));
 	}

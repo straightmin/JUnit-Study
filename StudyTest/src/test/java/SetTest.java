@@ -16,6 +16,9 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class SetTest {
 	
@@ -30,11 +33,22 @@ class SetTest {
 		numbers.add(3);
 	}
 
+	// 요구사항 1
 	@Test
 	@DisplayName("Set size() Test")
-	void test() {
+	void testSize() {
 		
 		assertEquals(3, numbers.size());
 	}
-
+	
+	// 요구사항 2
+	@ParameterizedTest
+	@ValueSource(ints = {1,2,3})
+	void contains(int number) {
+		
+		assertTrue(numbers.contains(number));
+		
+	}
+	
+	// 요구사항 3
 }
